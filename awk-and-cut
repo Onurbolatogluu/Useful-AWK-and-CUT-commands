@@ -1,0 +1,35 @@
+- root@ubuntu-1:~# echo "hello:world:test" | awk -F ':' '{print $1,$2}'
+hello world
+
+
+- root@ubuntu-1:~# echo "hello:world:test" | awk -F ':' -v OFS=','  '{print $1,$2}'
+hello,world
+
+
+- root@ubuntu-1:~# echo "hello:world:test" | awk -F ':' '{print $(NF - 1)}'
+world
+
+
+- root@ubuntu-1:~# echo "hello:world:test" | awk -F ':' '{print "COL1: " $1 " COL3: " $3}'
+COL1: hello COL3: test
+
+
+- root@ubuntu-1:~# echo "hello:world:test" | awk -F ':' '{print $NF}'
+test
+
+
+- root@ubuntu-1:~# echo 'one\two\three' | cut -d '\' -f 1,3 --output-delimiter=','
+one,three
+
+
+- root@ubuntu-1:~# echo 'one\two\three' | cut -d '\' -f 1,3
+one\three
+
+- root@ubuntu-1:~# echo 'one\two\three' | cut -c 1
+o
+
+- root@ubuntu-1:~# echo 'one\two\three' | cut -c 1,3
+oe
+
+- root@ubuntu-1:~# echo 'one\two\three' | cut -c 1-6
+one\tw
