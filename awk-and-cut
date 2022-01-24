@@ -20,7 +20,7 @@ lucas,elbando
 yakuza,hill
 luc,elbandos
 luvist,lndons
-> root@ubuntu-1:~# awk -F ','  '/2/{print $1}' people.csv
+> root@ubuntu-1:~# awk -F ','  '/2/{print $1}' people.csv > Returns lines with 2 in them.
 1
 ab
 
