@@ -9,6 +9,20 @@ hello,world
 - root@ubuntu-1:~# echo "hello:world:test" | awk -F ':' '{print $(NF - 1)}'
 world
 
+> root@ubuntu-1:~# cat people.csv
+first,last
+fernando,muslera
+1,2,3
+ab,2
+4,ar
+Mr. abject,gunns
+lucas,elbando
+yakuza,hill
+luc,elbandos
+luvist,lndons
+> root@ubuntu-1:~# awk -F ','  '/2/{print $1}' people.csv
+1
+ab
 
 - root@ubuntu-1:~# echo "hello:world:test" | awk -F ':' '{print "COL1: " $1 " COL3: " $3}'
 COL1: hello COL3: test
